@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import db from '../databaseconfig'
-import { Emp } from '../interface/Emp'
+import { EmployeeInterface } from '../interface/EmployeeInterfaces'
 
 
 
@@ -15,7 +15,7 @@ export async function getEmployeesDetail(req: Request, res: Response): Promise<R
 }
 
 export async function createEmployee(req: Request, res: Response) {
-	const newEmployee: Emp = req.body;
+	const newEmployee: EmployeeInterface = req.body;
 	try{
 		const employee = await db.insertEmployeeQuery('INSERT INTO EmployeeDetails SET ?', [newEmployee])
 		res.json({
@@ -57,7 +57,7 @@ export async function deleteEmployeeDetail(req: Request, res: Response) {
 }
 
 export async function updateEmployeeDetail(req: Request, res: Response) {
-	const updateEmployee: Emp = req.body;
+	const updateEmployee: EmployeeInterface = req.body;
 	try{
 		const employee = await db.insertEmployeeQuery('UPDATE EmployeeDetails set ? WHERE id = ?', [updateEmployee,req.params.id])
 		res.json({

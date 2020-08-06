@@ -1,5 +1,4 @@
 import mysql from "promise-mysql";
-import { Emp } from './interface/Emp'
 
 export default class DB {
   protected static _pool:any;

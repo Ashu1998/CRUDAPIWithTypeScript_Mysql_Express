@@ -1,7 +1,7 @@
 import express,{Application,Request,Response} from 'express';
 import bodyParser from 'body-parser';
 
-import employeeRoutes from './routes/empoyeeRoutes'
+import employeeRoutes from './routes/EmployeeRoutes'
 
 const app:Application = express();
 
