@@ -5,6 +5,7 @@ import employeeRoutes from './routes/EmployeeRoutes'
 
 const app:Application = express();
 console.log('Hello')
+console.log('Hello')
 
 app.use(bodyParser.json())
 
