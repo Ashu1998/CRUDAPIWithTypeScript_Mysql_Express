@@ -7,8 +7,8 @@ export default class DB {
       DB._pool = mysql.createPool({
       host:  "localhost",
       port:   3306,
-      user: "Ashu1998",
-      password:  "password",
+      user: "root",
+      password:  "root",
       database:  "EmployeeInfo",
       connectionLimit: 100
       });
